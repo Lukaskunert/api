@@ -1,6 +1,6 @@
 package cz.educanet.webik;
 
-public class Game {
+public class Hra {
 
     public int id;
     public String name;
@@ -11,46 +11,60 @@ public class Game {
     public int ageRestriction;
 
 
-    public int getIdco() {
+    public int getIdco()
+    {
         return idco;
     }
-    public void setIdco(int idco) {
+    public void setIdco(int idco)
+    {
         this.idco = idco;
     }
-    public String getJmeno() {
+    public String getJmeno()
+    {
         return name;
     }
-    public void setJmeno(String name) {
+    public void setJmeno(String name)
+    {
         this.name = name;
     }
-    public int getCena() {
+    public int getCena()
+    {
         return price;
     }
-    public void setCena(int price) {
+    public void setCena(int price)
+    {
         this.price = price;
     }
-    public String getVyvojar() {
+    public String getVyvojar()
+    {
         return developer;
     }
-    public void setVyvojar(String developer) {
+    public void setVyvojar(String developer)
+    {
         this.developer = developer;
     }
-    public String getVydavatel() {
+    public String getVydavatel()
+    {
         return publisher;
     }
-    public void setVydavatel(String publisher) {
+    public void setVydavatel(String publisher)
+    {
         this.publisher = publisher;
     }
-    public int getRating() {
+    public int getRating()
+    {
         return rating;
     }
-    public void setRating(int rating) {
+    public void setRating(int rating)
+    {
         this.rating = rating;
     }
-    public int getAgeRestriction() {
+    public int getAgeRestriction()
+    {
         return ageRestriction;
     }
-    public void setAgeRestriction(int ageRestriction) {
+    public void setAgeRestriction(int ageRestriction)
+    {
         this.ageRestriction = ageRestriction;
     }
 

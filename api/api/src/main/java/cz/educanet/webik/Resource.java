@@ -7,47 +7,54 @@ import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 
 @Produces(MediaType.APPLICATION_JSON)
-@Path("nevim")
-public class GameResource {
+    @Path("nevim")
+    public class Resource {
 
-    @Inject
-    private GameManager manager;
+        @Inject
+        private Manager manager;
 
 
     @GET
     public Response getAll() {
-        return Response.ok(manager.getGames()).build();
+
+        return Response.ok(manager.getHry()).build();
+
     }
 
     @GET
-    @Path("{idco}")
-    public Response getGame(@PathParam("idco") int id) {
-        return  Response.ok(manager.getGame(id)).build();
-    }
 
-    @POST
-    public Response createGame(Game game){
-        if(!manager.create(game))
-            return Response.status(400).build();
-        return Response.ok(game).build();
-    }
+        @Path("{idco}")
+        public Response getHra(@PathParam("idco") int idco) {
+
+            return  Response.ok(manager.getHra(idco)).build();
+
+        }
+
+        @POST
+        public Response createHra(Hra hra){
+            if(!manager.create(hra))
+                return Response.status(400).build();
+            return Response.ok(hra).build();
+        }
 
     @PUT
 
-    @Path("{id}")
-    public Response editGame(@PathParam("id") int id, Game game) {
-        return Response.ok("hra gon").build();
-    }
+        @Path("{id}")
+        public Response editHra(@PathParam("id") int id, Hra hra) {
+
+            return Response.ok("hra gon").build();
+
+        }
 
     @DELETE
 
-    @Path("{idco}")
-    public Response deleteGame(@PathParam("idco") int id) {
-        if(manager.removeGame(id)){
-            return Response.ok("hra gon").build();
-        } else {
-            return Response.status(Response.Status.BAD_REQUEST).build();
+        @Path("{idco}")
+        public Response deleteHra(@PathParam("idco") int idco) {
+            if(manager.removeHra(idco)){
+                return Response.ok("hra gon").build();
+            } else {
+                return Response.status(Response.Status.BAD_REQUEST).build();
+            }
         }
-    }
 
-}
+    }

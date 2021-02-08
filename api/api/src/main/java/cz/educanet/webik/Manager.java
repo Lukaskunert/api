@@ -1,51 +1,45 @@
 package cz.educanet.webik;
 
 import javax.enterprise.context.ApplicationScoped;
+
 import javax.ws.rs.core.Response;
+
 import java.util.ArrayList;
+
 import java.lang.Math;
 
 @ApplicationScoped
-public class GameManager {
+    public class Manager {
 
-    private ArrayList<Game> games = new ArrayList<>();
-    public ArrayList<Game> getGames(){
-        return games;
+        private ArrayList<Hra> games = new ArrayList<>();
+        public ArrayList<Hra> getGames(){
+        return hry;
     }
-    public boolean create(Game game) {
+        public boolean create(Hra hra) {
 
-        if(game.getRating() < 0 || game.getRating() > 100)
-            return false;
-
-        int newId = (int) (Math.random()*(100 +1));
-
-        if (gameCheck(newId)){
-            game.setId(newId);
-            games.add(game);
-        }
-        return true;
-    }
-
-    public Game getGame (int id){
-        return  games.stream()
-                .filter(gameStream -> id == gameStream.getId())
-                .findAny()
-                .orElse(null);
-    }
-
-    public boolean gameCheck(int id) {
-        for (int i = 0; i < 100; i++){
-            if (id != games.get(id).id) {
+            if(hra.getHodnoceni() < 0 || hra.getHodnoceni() > 100)
                 return false;
-            }
-        } return true;
-    }
 
-    public boolean removeGame(int id){
-        return  games.remove(getGame(id));
-    }
-    public boolean editGame(int id){
-        return true;
-    }
+        public Hra getHra (int id){
+            return  hry.stream()
+                    .filter(hraStream -> id == hraStream.getIdco())
+                    .findAny()
+                    .orElse(null);
+        }
 
-}
+        public boolean hraCheck(int id) {
+            for (int i = 0; i < 100; i++){
+                if (id != hry.get(id).id) {
+                    return false;
+                }
+            } return true;
+        }
+
+        public boolean removeHra(int idco){
+            return  hry.remove(getGame(idco));
+        }
+        public boolean editHra(int idco){
+            return true;
+        }
+
+    }
