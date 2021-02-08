@@ -42,7 +42,7 @@ import java.util.ArrayList;
         @Path("{id}")
         public Response editHra(@PathParam("id") int id, Hra hra) {
 
-            return Response.ok("hra gon").build();
+
 
         }
 
@@ -51,7 +51,7 @@ import java.util.ArrayList;
         @Path("{idco}")
         public Response deleteHra(@PathParam("idco") int idco) {
             if(manager.removeHra(idco)){
-                return Response.ok("hra gon").build();
+
             } else {
                 return Response.status(Response.Status.BAD_REQUEST).build();
             }

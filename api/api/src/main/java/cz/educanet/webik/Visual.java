@@ -2,12 +2,12 @@ package cz.educanet.webik;
 
 public class Hra {
 
-    public int id;
-    public String name;
-    public int price;
-    public String developer;
-    public String publisher;
-    public int  rating;
+    public int idco;
+    public String jmeno;
+    public int cena;
+    public String vyvojar;
+    public String vydavatel;
+    public int  hodnoceni;
     public int ageRestriction;
 
 
@@ -21,43 +21,43 @@ public class Hra {
     }
     public String getJmeno()
     {
-        return name;
+        return jmeno;
     }
-    public void setJmeno(String name)
+    public void setJmeno(String jmeno)
     {
-        this.name = name;
+        this.jmeno = jmeno;
     }
     public int getCena()
     {
-        return price;
+        return cena;
     }
-    public void setCena(int price)
+    public void setCena(int cena)
     {
-        this.price = price;
+        this.cena = cena;
     }
     public String getVyvojar()
     {
-        return developer;
+        return vyvojar;
     }
-    public void setVyvojar(String developer)
+    public void setVyvojar(String vyvojar)
     {
-        this.developer = developer;
+        this.vyvojar = vyvojar;
     }
     public String getVydavatel()
     {
-        return publisher;
+        return vydavatel;
     }
-    public void setVydavatel(String publisher)
+    public void setVydavatel(String vydavatel)
     {
-        this.publisher = publisher;
+        this.vydavatel = vydavatel;
     }
-    public int getRating()
+    public int getHodnoceni()
     {
-        return rating;
+        return hodnoceni;
     }
-    public void setRating(int rating)
+    public void setHodnoceni(int hodnoceni)
     {
-        this.rating = rating;
+        this.hodnoceni = hodnoceni;
     }
     public int getAgeRestriction()
     {
